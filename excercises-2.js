@@ -95,7 +95,13 @@ return backtoString=reverseIt.join("");
 // ---------------------
 
 function findLongestWord(words){
-    
+    var makeArray=words.split(" ");
+    makeArray.filter(function(value){
+      var longestWord = Math.max(value.length)
+    }
+    return longestWord;
+
+  )}
 }
 
 // ---------------------
