@@ -66,12 +66,17 @@ function isVowel(char){
 // ---------------------
 
 function rovarspraket(string){
- var phrase=string.split("");
+ var makeArray=string.split("");
 
- if ( phrase !== "a" && phrase !== "e" && phrase !== "i" && phrase !== "o" && phrase !=="u"){
-  console.log(phrase);
- }
+ makeArray.forEach(function(letter){
 
+ if ( letter  !== "a" && letter !== "e" && letter !== "i" && letter !== "o" && letter !=="u"){
+  return (letter+"O"+letter);
+  } else {
+    console.log(string);
+   }
+  }
+};
 
 
 // ---------------------
@@ -79,6 +84,10 @@ function rovarspraket(string){
 // ---------------------
 
 function reverse(string){
+makeArray=string.split("");
+reverseIt=makeArray.reverse();
+return backtoString=reverseIt.join("");
+};
 
 
 // ---------------------
