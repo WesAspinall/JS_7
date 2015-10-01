@@ -67,17 +67,17 @@ function isVowel(char){
 
 function rovarspraket(string){
  var makeArray=string.split("");
-
- makeArray.forEach(function(letter){
-
- if ( letter  !== "a" && letter !== "e" && letter !== "i" && letter !== "o" && letter !=="u"){
-  return (letter+"O"+letter);
+ var makeMap=makeArray.map(function(letter){
+ 
+ if ( letter.toLowerCase() !== "a" || letter.toLowerCase() !== "e" || letter.toLowerCase() !== "i" || letter.toLowerCase() !== "o" || letter.toLowerCase() !=="u"){
+  return (letter.toLowerCase()+"O"+letter.toLowerCase());
   } else {
-    console.log(string);
+    return letter;
    }
-  }
+  })
+  var makeString=makeMap.join("");
+  return makeString;
 };
-
 
 // ---------------------
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
